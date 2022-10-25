@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Teleman - Telemarketing & VoIP Service SaaS Application Documentation</title>
+    <title>Teleman - Telemarketing & VoIP Service SaaS Application Documentation WordPress Plugin</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -46,7 +46,7 @@
                     </button>
                     <div class="site-logo"><a class="navbar-brand" href="index.html"><span
                                 class="logo-text">Teleman<span class="text-alt"> - Telemarketing & VoIP Service SaaS
-                                    Application</span></span></a></div>
+                                    Application WordPress Plugin</span></span></a></div>
                 </div>
                 <!--//docs-logo-wrapper-->
                 <div class="docs-top-utilities d-flex justify-content-end align-items-center">
@@ -72,20 +72,11 @@
             <nav id="docs-nav" class="docs-nav navbar">
                 <ul class="section-items list-unstyled nav flex-column pb-3">
                     <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
-                                class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Getting
-                            Started</a></li>
+                                class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Getting Started</a></li>
                     <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Introduction</a></li>
                     <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Server Requirements</a></li>
                     <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Installation Steps</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Cronjob</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Signin Credential</a></li>
-                    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
-                                class="theme-icon-holder mr-2"><i class="fas fa-arrow-down"></i></span>Usage</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Overview</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Translation</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Front-End</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Multi-Currency</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">Setup Twilio</a></li>
+             
                     <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
                                 class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>Support</a></li>
                     <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Overview</a></li>
@@ -102,7 +93,7 @@
 
                     <header class="docs-header">
                         <h1 class="docs-heading">Getting Started <span class="docs-time">Version: 1.0.0, Last updated:
-                                23-07-2022</span></h1>
+                                25-10-2022</span></h1>
                     </header>
                     <section class="docs-section" id="item-1-1">
                         <h2 class="section-heading">Introduction</h2>
@@ -122,197 +113,48 @@
                             3. As you provide Twilio provider accounts to your users, you can charge them in multiple
                             ways;
                         </p>
+
+                        <p>
+                            With this plugin, you can fetch woocommerce order billing info users name & contact number. 
+                            Also, you can start campaign directly from the plugin dashboard.
+                        </p>
+
                     </section>
 
                     <section class="docs-section" id="item-1-2">
-                        <h2 class="section-heading">Server Requirements</h2>
+                        <h2 class="section-heading">Plugin Requirements</h2>
                         <p>
-                            PHP Verion: 8.0+
+                            WordPress Version: 5.0+
                             <br>
-                            MySQL Version: 5.2+
+                            WooCommerce Version: 3.6.2+
                             <br>
-                            BCMath PHP Extension
+                            NodeJS Version: 16.18.0(LTS)
                             <br>
-                            Ctype PHP Extension
+                            Teleman Version: 1.16.0+
                             <br>
-                            Fileinfo PHP Extension
-                            <br>
-                            JSON PHP Extension
-                            <br>
-                            Mbstring PHP Extension
-                            <br>
-                            OpenSSL PHP Extension
-                            <br>
-                            PDO PHP Extension
-                            <br>
-                            Tokenizer PHP Extension
-                            <br>
-                            XML PHP Extension
-                            <br>
-                            curl enable
-                            <br>
-                            zip Extension
-                            <br>
-                            gd Extension
                         </p>
                     </section>
 
                     <section class="docs-section" id="item-1-3">
                         <h2 class="section-heading">Installation Steps</h2>
+                        
                         <p>
                             <b>Step 1</b><br>
                             Unzip the file you downloaded from Codecanyon, It inclueds one zip file. You only need to
-                            upload the file "zip" file to your server and unzip it.<br><br>
+                            upload the file "zip" file to your add plugins.<br><br>
                             <b>Step 2</b><br>
-                            Create an empty database in your MySQL server, Keep the credentials inculding:<br>
-                            1. Host name or host ip-address<br>
-                            2. Database name<br>
-                            3. Database Username<br>
-                            4. Password for database username
+                            Activate the plugin. It will create some database columns.
                             <br><br>
                             <b>Step 3</b><br>
-                            Generally, If you are using cPanel, You may skip this step.<br>
-                            But if you setup the server by yourself, You may check if the following folders are
-                            writable:<br>
-                            1. /upload/, Always require 777 or 755, Apply to all files and subdirectories<br>
-                            2. /backup/, Always require 777 or 755, Apply to directory only<br>
-                            3. /application/config/, Only require 777 or 755 while installing the script, Apply to
-                            directory only<br>
-                            You may navigate and set the proper permission using this command: chmod -R 777 folderName
+                            Now go to you Teleman application, create a token and put the token into the plugin API TOKEN input. provider the Teleman installed URL and admin email address.
                             <br><br>
-                            <b>Step 4</b><br>
-                            Open your URL, You will be redirected to the installation page, Fill in the necessary
-                            information and click continue at every step.<br>
-                            If all are ready then you will finally see the success page.
-                            <figure class="figure docs-figure py-3">
-                                <a href="assets/images/chrome_YW1qlFmPqv.jpg" data-title="Installation Page"
-                                    data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded"
-                                        src="assets/images/chrome_YW1qlFmPqv.jpg" style="width: 600px;"></a>
-                            </figure>
                         </p>
+
                         <p>
-                            <b>Step 5</b><br>
-                            1. Migrate with fresh content.<br>
-                            2. Create an admin user.<br><br>
-                            <b>Important Notice</b><br>
-                            You should enable rewrite module before starting to use. But if you are using cPanel
-                            generally you don't need to follow this notice.<br>
-                            For Apache, you should run the following command:<br>
-                            <code>a2enmod rewrite</code><br>
-                            <code>service apache2 restart</code><br>
-                            For Nginx, you should follow the steps:<br>
-                            Open the file below replacing ‘default’ if necessary with the sites server block:<br>
-                            <code>sudo nano /etc/nginx/sites-available/default</code><br>
-                            Replace:<br>
-                            <code>try_files $uri $uri/ =404;</code><br>
-                            With:<br>
-                            <code>try_files $uri $uri/ /index.php?$args;</code><br>
-                            If you install the script in a subdirectory, You should change <code>/index.php?$args</code>
-                            to <code>/subdirectory/index.php?$args</code>.
-                            Then save and run the command:<br>
-                            <code>sudo service nginx restart</code><br>
-                            <br>
-                            <b>Congratulations! You have installed Teleman - Telemarketing & VoIP Service SaaS
-                                Application successfully.</b><br><br>
+                            If you are a video learner you can have a look at this playlist: 
+                            <a href="https://youtube.com/playlist?list=PLhI3kwI7TBeNmQ6BAIEuVmoj8MwWPCjo5" target="_blank" rel="noopener noreferrer">Youtube playlist</a>
                         </p>
-                    </section>
-
-                    <section class="docs-section" id="item-1-4">
-                        <h2 class="section-heading">Cronjob</h2>
-                        <p>
-                            You should setup the four following Cronjob:<br>
-                            1. For calculate the balance deductoin, Every 1 second:<br>
-                            /usr/local/bin/php /home6/username/public_html/artisan calculate:deduction<br>
-                            2. For call duration, Every 1 second:<br>
-                            usr/local/bin/php /home6/username/public_html/artisan call:duration<br>
-                            3. For campaign call, Every 1 second:<br>
-                            /usr/local/bin/php /home6/username/public_html/artisan start:calling<br>
-                            3. For Expiry subscription alert, Every 1 second:<br>
-                            /usr/local/bin/php /home6/username/public_html/artisan send:expiry-alert-mail<br>
-                        </p>
-                        <br>
-                        <b>Note:: You can set your own desired schedule as long as you want.</b><br><br>
-                    </section>
-
-                    <section class="docs-section" id="item-1-5">
-                        <h2 class="section-heading">Signin Credential</h2>
-                        <p>
-                            Here is the default signin credentials:<br>
-                            URL: yourdomain/login<br>
-                            email: As given when installtion<br>
-                            Password: As given when installtion<br>
-                        </p>
-                    </section>
-
-                </article>
-
-                <article class="docs-article" id="section-2">
-
-                    <header class="docs-header">
-                        <h1 class="docs-heading">Usage</h1>
-                    </header>
-                    <section class="docs-section" id="item-2-1">
-                        <h2 class="section-heading">Overview</h2>
-                        <p>
-                            After installation you sign in as administrator,
-                            you may need to set up the system.
-                            Generally they are all easy to understand but a detailed is available on YouTube here is the
-                            playlist: <a href="https://www.youtube.com/playlist?list=PLhI3kwI7TBeNmQ6BAIEuVmoj8MwWPCjo5"
-                                target="_blank" rel="noopener noreferrer">Playlist</a>.
-                        </p>
-                    </section>
-
-                    <section class="docs-section" id="item-2-2">
-                        <h2 class="section-heading">Translation</h2>
-                        <p>
-                            The application used Google Translate. So you can translate at your own language. Google
-                            Translate supports over 133 languages.
-                        </p>
-                    </section>
-
-                    <section class="docs-section" id="item-2-3">
-                        <h2 class="section-heading">Front-End</h2>
-                        <p>
-                            This script comes with a front-end. You may want to edit the index page,
-                            If that's the case you should proceed to resources\views\frontend, you just need to edit the
-                            file directly, It's a html page based on Bootstrap 5. <br>
-                            Teleman has live frondend editor. If you are logged in as an admin, you will see editable
-                            pen when you hover on a text. Just edit the text a click anywhere, it will save the data
-                            instantly.
-                        </p>
-                    </section>
-
-                    <section class="docs-section" id="item-2-4">
-                        <h2 class="section-heading">Multi-Currency</h2>
-                        <p>
-                            Teleman has a built-in multi-currency converter you just need to select a country currency
-                            and it will automatically convert to the current exchange rate. You can update the current
-                            rate anytime by just clicking on the update button. The application by default provides us
-                            with this offer so you can change your currency and can make it like to default.
-                        </p>
-                    </section>
-
-                    <section class="docs-section" id="item-2-5">
-                        <h2 class="section-heading">Setup Twilio</h2>
-                        <p>
-                            1. login to your twilio console. You will see account SID and auth token.
-                            <br>
-                            2. Now you need a mobile number. Click on the button called to get the trial mobile number.
-                            <br>
-                            3. <b>Verified caller ID::</b> Now we need to create a verified caller ID if you are using a
-                            trial account.
-                            <br>
-                            4. <b>Capability Token::</b> Go to voice Twiml App. Create a new app. You will see the voice
-                            configuration request URL. input this https:://domain.com/vc/cid{yourphonenumber}.php
-                            <br>
-                            5. <b>Geo Permission::</b> You have to confirm the Geo permission for which country you want
-                            to call without this permission you will face geo permission air so please fix your confirm
-                            your geo permission location.
-                            <br>
-                            <br>
-                            <b>Note::</b> If you are a visual learner checkout our Youtube video:: <a
-                                href="https://youtu.be/0vb9vkIZwik" target="_blank">VoIP Dialer Demo Call</a>
-                        </p>
+                      
                     </section>
 
                 </article>
